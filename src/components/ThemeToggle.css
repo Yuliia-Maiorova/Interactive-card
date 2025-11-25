@@ -1,0 +1,55 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background-color: var(--toggle-bg);
+  color: var(--toggle-text);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:focus {
+  outline: 2px solid #61dafb;
+  outline-offset: 2px;
+}
+
+.theme-toggle.light {
+  --toggle-bg: #f0f0f0;
+  --toggle-text: #333;
+}
+
+.theme-toggle.dark {
+  --toggle-bg: #2d2d2d;
+  --toggle-text: #fff;
+}
+
+.theme-toggle-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.theme-toggle-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .theme-toggle-icon {
+    font-size: 16px;
+  }
+}
