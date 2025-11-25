@@ -22,8 +22,9 @@ const FlipCard: React.FC<FlipCardProps> = ({
     audioRef.current.src = 'data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2teleQkAHI7W0qRjBQAkk9XRoVwAACS8zdnIhmAAABqz0N+odCsAABOoyc+9klUAAQ+gxsi2kV4ADQ+dxMW2lWEAEg2fxcW3lGEAFQubw8K2lWMGGg2fxsW3lGEAFQubw8K2lWMGGg2fxsW3lGEAFQubw8K2lWM=';
     
     return () => {
+      // Pause audio on cleanup
       if (audioRef.current) {
-        audioRef.current = null;
+        audioRef.current.pause();
       }
     };
   }, []);
